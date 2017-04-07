@@ -1,0 +1,283 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/puleos/object-hash"
+
+    >object-hash (v1.1.7)</a>
+</h1>
+<h4>Generate hashes from javascript objects in node and the browser.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.object-hash">module object-hash</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.object-hash.MD5">
+            function <span class="apidocSignatureSpan">object-hash.</span>MD5
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.object-hash.keys">
+            function <span class="apidocSignatureSpan">object-hash.</span>keys
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.object-hash.keysMD5">
+            function <span class="apidocSignatureSpan">object-hash.</span>keysMD5
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.object-hash.sha1">
+            function <span class="apidocSignatureSpan">object-hash.</span>sha1
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.object-hash.writeToStream">
+            function <span class="apidocSignatureSpan">object-hash.</span>writeToStream
+            <span class="apidocSignatureSpan">(object, options, stream)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.object-hash" id="apidoc.module.object-hash">module object-hash</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.object-hash.MD5" id="apidoc.element.object-hash.MD5">
+        function <span class="apidocSignatureSpan">object-hash.</span>MD5
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MD5 = function (object){
+  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+
+## hash.keys(value);
+Hash object keys using the sha1 algorithm, values ignored.
+
+*Sugar method, equivalent to hash(value, {excludeValues: true})*
+
+## hash.<span class="apidocCodeKeywordSpan">MD5</span>(value);
+Hash using the md5 algorithm.
+
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+
+## hash.keysMD5(value);
+Hash object keys using the md5 algorithm, values ignored.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.object-hash.keys" id="apidoc.element.object-hash.keys">
+        function <span class="apidocSignatureSpan">object-hash.</span>keys
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keys = function (object){
+  return objectHash(object, {excludeValues: true, algorithm: &#x27;sha1&#x27;, encoding: &#x27;hex&#x27;});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this[&#x27;_&#x27; + objType](object);
+  } else if (options.ignoreUnknown) {
+    return write(&#x27;[&#x27; + objType + &#x27;]&#x27;);
+  } else {
+    throw new Error(&#x27;Unknown object type &#x22;&#x27; + objType + &#x27;&#x22;&#x27;);
+  }
+}else{
+  var keys = Object.<span class="apidocCodeKeywordSpan">keys</span>(object).sort();
+  // Make sure to incorporate special properties, so
+  // Types with different prototypes will produce
+  // a different hash and objects derived from
+  // different functions (`new Foo`, `new Bar`) will
+  // produce different hashes.
+  // We never do this for native functions since some
+  // seem to break because of that.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.object-hash.keysMD5" id="apidoc.element.object-hash.keysMD5">
+        function <span class="apidocSignatureSpan">object-hash.</span>keysMD5
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keysMD5 = function (object){
+  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;, excludeValues: true});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*Sugar method, equivalent to hash(value, {excludeValues: true})*
+
+## hash.MD5(value);
+Hash using the md5 algorithm.
+
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+
+## hash.<span class="apidocCodeKeywordSpan">keysMD5</span>(value);
+Hash object keys using the md5 algorithm, values ignored.
+
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+
+## hash.writeToStream(value, [options,] stream):
+Write the information that would otherwise have been hashed to a stream, e.g.:
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.object-hash.sha1" id="apidoc.element.object-hash.sha1">
+        function <span class="apidocSignatureSpan">object-hash.</span>sha1
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sha1 = function (object){
+  return objectHash(object);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*  `respectType` {true|false} Whether special type attributes (`.prototype`, `.__proto__`, `.constructor`)
+   are hashed. default: true
+*  `unorderedArrays` {true|false} Sort all arrays using before hashing. Note that this affects *all* collections,
+   i.e. including typed arrays, Sets, Maps, etc. default: false
+*  `unorderedSets` {true|false} Sort `Set` and `Map` instances before hashing, i.e. make
+   `hash(new Set([1, 2])) == hash(new Set([2, 1]))` return `true`. default: true
+
+## hash.<span class="apidocCodeKeywordSpan">sha1</span>(value);
+Hash using the sha1 algorithm.
+
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+
+## hash.keys(value);
+Hash object keys using the sha1 algorithm, values ignored.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.object-hash.writeToStream" id="apidoc.element.object-hash.writeToStream">
+        function <span class="apidocSignatureSpan">object-hash.</span>writeToStream
+        <span class="apidocSignatureSpan">(object, options, stream)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeToStream = function (object, options, stream) {
+  if (typeof stream === &#x27;undefined&#x27;) {
+    stream = options;
+    options = {};
+  }
+
+  options = applyDefaults(object, options);
+
+  return typeHasher(options, stream).dispatch(object);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+
+## hash.keysMD5(value);
+Hash object keys using the md5 algorithm, values ignored.
+
+*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+
+## hash.<span class="apidocCodeKeywordSpan">writeToStream</span>(value, [options,] stream):
+Write the information that would otherwise have been hashed to a stream, e.g.:
+```js
+hash.writeToStream({foo: &#x27;bar&#x27;, a: 42}, {respectType: false}, process.stdout)
+// =&#x3e; e.g. &#x27;object:a:number:42foo:string:bar&#x27;
+```
+
+## Installation
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
