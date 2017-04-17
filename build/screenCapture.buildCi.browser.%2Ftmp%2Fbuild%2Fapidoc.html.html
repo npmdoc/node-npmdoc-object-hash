@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/puleos/object-hash"
-
-    >object-hash (v1.1.8)</a>
+    <a href="https://github.com/puleos/object-hash">object-hash (v1.1.8)</a>
 </h1>
 <h4>Generate hashes from javascript objects in node and the browser.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.object-hash">module object-hash</a><ol>
 
@@ -257,10 +250,10 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">MD5 = function (object){
-  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;});
+  return objectHash(object, {algorithm: 'md5', encoding: 'hex'});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'sha1'})*
 
 ## hash.keys(value);
 Hash object keys using the sha1 algorithm, values ignored.
@@ -270,7 +263,7 @@ Hash object keys using the sha1 algorithm, values ignored.
 ## hash.<span class="apidocCodeKeywordSpan">MD5</span>(value);
 Hash using the md5 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.keysMD5(value);
 Hash object keys using the md5 algorithm, values ignored.
@@ -290,17 +283,17 @@ Hash object keys using the md5 algorithm, values ignored.
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: &#x27;&#x27;,
+    basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: [&#x27;mocha&#x27;],
+    frameworks: ['mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      &#x27;dist/*.js&#x27;
+      'dist/*.js'
     ],
 
 
@@ -316,9 +309,9 @@ Hash object keys using the md5 algorithm, values ignored.
 
 
     // test results reporter to use
-    // possible values: &#x27;dots&#x27;, &#x27;progress&#x27;
+    // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: [&#x27;progress&#x27;],
+    reporters: ['progress'],
 
 
     // web server port
@@ -340,7 +333,7 @@ Hash object keys using the md5 algorithm, values ignored.
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [&#x27;PhantomJS&#x27;, &#x27;Firefox&#x27;],
+    browsers: ['PhantomJS', 'Firefox'],
 
 
     // Continuous Integration mode
@@ -365,14 +358,14 @@ Hash object keys using the md5 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">keys = function (object){
-  return objectHash(object, {excludeValues: true, algorithm: &#x27;sha1&#x27;, encoding: &#x27;hex&#x27;});
+  return objectHash(object, {excludeValues: true, algorithm: 'sha1', encoding: 'hex'});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    this[&#x27;_&#x27; + objType](object);
+    this['_' + objType](object);
   } else if (options.ignoreUnknown) {
-    return write(&#x27;[&#x27; + objType + &#x27;]&#x27;);
+    return write('[' + objType + ']');
   } else {
-    throw new Error(&#x27;Unknown object type &#x22;&#x27; + objType + &#x27;&#x22;&#x27;);
+    throw new Error('Unknown object type "' + objType + '"');
   }
 }else{
   var keys = Object.<span class="apidocCodeKeywordSpan">keys</span>(object).sort();
@@ -396,7 +389,7 @@ Hash object keys using the md5 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">keysMD5 = function (object){
-  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;, excludeValues: true});
+  return objectHash(object, {algorithm: 'md5', encoding: 'hex', excludeValues: true});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 *Sugar method, equivalent to hash(value, {excludeValues: true})*
@@ -404,12 +397,12 @@ Hash object keys using the md5 algorithm, values ignored.
 ## hash.MD5(value);
 Hash using the md5 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.<span class="apidocCodeKeywordSpan">keysMD5</span>(value);
 Hash object keys using the md5 algorithm, values ignored.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5', excludeValues: true})*
 
 ## hash.writeToStream(value, [options,] stream):
 Write the information that would otherwise have been hashed to a stream, e.g.:
@@ -440,7 +433,7 @@ Write the information that would otherwise have been hashed to a stream, e.g.:
 ## hash.<span class="apidocCodeKeywordSpan">sha1</span>(value);
 Hash using the sha1 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'sha1'})*
 
 ## hash.keys(value);
 Hash object keys using the sha1 algorithm, values ignored.
@@ -463,7 +456,7 @@ Hash object keys using the sha1 algorithm, values ignored.
  }
 
  var buf = hashingStream.read();
- if (options.encoding === &#x27;buffer&#x27;) {
+ if (options.encoding === 'buffer') {
    return buf;
  }
 
@@ -488,7 +481,7 @@ Hash object keys using the sha1 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeToStream = function (object, options, stream) {
-  if (typeof stream === &#x27;undefined&#x27;) {
+  if (typeof stream === 'undefined') {
     stream = options;
     options = {};
   }
@@ -498,18 +491,18 @@ Hash object keys using the sha1 algorithm, values ignored.
   return typeHasher(options, stream).dispatch(object);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.keysMD5(value);
 Hash object keys using the md5 algorithm, values ignored.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5', excludeValues: true})*
 
 ## hash.<span class="apidocCodeKeywordSpan">writeToStream</span>(value, [options,] stream):
 Write the information that would otherwise have been hashed to a stream, e.g.:
 ```js
-hash.writeToStream({foo: &#x27;bar&#x27;, a: 42}, {respectType: false}, process.stdout)
-// =&#x3e; e.g. &#x27;object:a:number:42foo:string:bar&#x27;
+hash.writeToStream({foo: 'bar', a: 42}, {respectType: false}, process.stdout)
+// =&gt; e.g. 'object:a:number:42foo:string:bar'
 ```
 
 ## Installation
@@ -531,10 +524,10 @@ hash.writeToStream({foo: &#x27;bar&#x27;, a: 42}, {respectType: false}, process.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">MD5 = function (object){
-  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;});
+  return objectHash(object, {algorithm: 'md5', encoding: 'hex'});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'sha1'})*
 
 ## hash.keys(value);
 Hash object keys using the sha1 algorithm, values ignored.
@@ -544,7 +537,7 @@ Hash object keys using the sha1 algorithm, values ignored.
 ## hash.<span class="apidocCodeKeywordSpan">MD5</span>(value);
 Hash using the md5 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.keysMD5(value);
 Hash object keys using the md5 algorithm, values ignored.
@@ -569,17 +562,17 @@ Hash object keys using the md5 algorithm, values ignored.
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: &#x27;&#x27;,
+    basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: [&#x27;mocha&#x27;],
+    frameworks: ['mocha'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      &#x27;dist/*.js&#x27;
+      'dist/*.js'
     ],
 
 
@@ -595,9 +588,9 @@ Hash object keys using the md5 algorithm, values ignored.
 
 
     // test results reporter to use
-    // possible values: &#x27;dots&#x27;, &#x27;progress&#x27;
+    // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: [&#x27;progress&#x27;],
+    reporters: ['progress'],
 
 
     // web server port
@@ -619,7 +612,7 @@ Hash object keys using the md5 algorithm, values ignored.
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [&#x27;PhantomJS&#x27;, &#x27;Firefox&#x27;],
+    browsers: ['PhantomJS', 'Firefox'],
 
 
     // Continuous Integration mode
@@ -649,14 +642,14 @@ Hash object keys using the md5 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">keys = function (object){
-  return objectHash(object, {excludeValues: true, algorithm: &#x27;sha1&#x27;, encoding: &#x27;hex&#x27;});
+  return objectHash(object, {excludeValues: true, algorithm: 'sha1', encoding: 'hex'});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    this[&#x27;_&#x27; + objType](object);
+    this['_' + objType](object);
   } else if (options.ignoreUnknown) {
-    return write(&#x27;[&#x27; + objType + &#x27;]&#x27;);
+    return write('[' + objType + ']');
   } else {
-    throw new Error(&#x27;Unknown object type &#x22;&#x27; + objType + &#x27;&#x22;&#x27;);
+    throw new Error('Unknown object type "' + objType + '"');
   }
 }else{
   var keys = Object.<span class="apidocCodeKeywordSpan">keys</span>(object).sort();
@@ -685,7 +678,7 @@ Hash object keys using the md5 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">keysMD5 = function (object){
-  return objectHash(object, {algorithm: &#x27;md5&#x27;, encoding: &#x27;hex&#x27;, excludeValues: true});
+  return objectHash(object, {algorithm: 'md5', encoding: 'hex', excludeValues: true});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 *Sugar method, equivalent to hash(value, {excludeValues: true})*
@@ -693,12 +686,12 @@ Hash object keys using the md5 algorithm, values ignored.
 ## hash.MD5(value);
 Hash using the md5 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.<span class="apidocCodeKeywordSpan">keysMD5</span>(value);
 Hash object keys using the md5 algorithm, values ignored.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5', excludeValues: true})*
 
 ## hash.writeToStream(value, [options,] stream):
 Write the information that would otherwise have been hashed to a stream, e.g.:
@@ -734,7 +727,7 @@ Write the information that would otherwise have been hashed to a stream, e.g.:
 ## hash.<span class="apidocCodeKeywordSpan">sha1</span>(value);
 Hash using the sha1 algorithm.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;sha1&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'sha1'})*
 
 ## hash.keys(value);
 Hash object keys using the sha1 algorithm, values ignored.
@@ -760,7 +753,7 @@ Hash object keys using the sha1 algorithm, values ignored.
  }
 
  var buf = hashingStream.read();
- if (options.encoding === &#x27;buffer&#x27;) {
+ if (options.encoding === 'buffer') {
    return buf;
  }
 
@@ -790,7 +783,7 @@ Hash object keys using the sha1 algorithm, values ignored.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeToStream = function (object, options, stream) {
-  if (typeof stream === &#x27;undefined&#x27;) {
+  if (typeof stream === 'undefined') {
     stream = options;
     options = {};
   }
@@ -800,18 +793,18 @@ Hash object keys using the sha1 algorithm, values ignored.
   return typeHasher(options, stream).dispatch(object);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5'})*
 
 ## hash.keysMD5(value);
 Hash object keys using the md5 algorithm, values ignored.
 
-*Sugar method, equivalent to hash(value, {algorithm: &#x27;md5&#x27;, excludeValues: true})*
+*Sugar method, equivalent to hash(value, {algorithm: 'md5', excludeValues: true})*
 
 ## hash.<span class="apidocCodeKeywordSpan">writeToStream</span>(value, [options,] stream):
 Write the information that would otherwise have been hashed to a stream, e.g.:
 ```js
-hash.writeToStream({foo: &#x27;bar&#x27;, a: 42}, {respectType: false}, process.stdout)
-// =&#x3e; e.g. &#x27;object:a:number:42foo:string:bar&#x27;
+hash.writeToStream({foo: 'bar', a: 42}, {respectType: false}, process.stdout)
+// =&gt; e.g. 'object:a:number:42foo:string:bar'
 ```
 
 ## Installation
@@ -827,3 +820,4 @@ hash.writeToStream({foo: &#x27;bar&#x27;, a: 42}, {respectType: false}, process.
     ]
 </div>
 </div>
+</body></html>
