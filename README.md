@@ -1,4 +1,7 @@
-# api documentation for  [object-hash (v1.1.8)](https://github.com/puleos/object-hash)  [![npm package](https://img.shields.io/npm/v/npmdoc-object-hash.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-object-hash) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-object-hash.svg)](https://travis-ci.org/npmdoc/node-npmdoc-object-hash)
+# npmdoc-object-hash
+
+#### basic api documentation for  [object-hash (v1.1.8)](https://github.com/puleos/object-hash)  [![npm package](https://img.shields.io/npm/v/npmdoc-object-hash.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-object-hash) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-object-hash.svg)](https://travis-ci.org/npmdoc/node-npmdoc-object-hash)
+
 #### Generate hashes from javascript objects in node and the browser.
 
 [![NPM](https://nodei.co/npm/object-hash.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/object-hash)
@@ -84,7 +87,8 @@
         "prepublish": "gulp dist",
         "test": "node ./node_modules/.bin/mocha test"
     },
-    "version": "1.1.8"
+    "version": "1.1.8",
+    "bin": {}
 }
 ```
 
